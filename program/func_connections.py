@@ -35,3 +35,4 @@ quote_balance = account.data["account"]["quoteBalance"]
 print("Connection Succesful")
 print("Account ID: ", account_id)
 print("Quote Balance:", quote_balance)
+
