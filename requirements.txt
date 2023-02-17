@@ -10,7 +10,7 @@ charset-normalizer==2.1.1
 click==8.1.3
 cytoolz==0.11.2
 dateparser==1.0.0
-decouple==3.7
+decouple==0.3.7
 distlib==0.3.6
 dydx-v3-python==1.9.1
 ecdsa==0.16.0
