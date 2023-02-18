@@ -29,7 +29,7 @@ def place_market_order(client, market, side, size, price, reduce_only):
     )
 
     # Return result
-    return place_market_order.data
+    return placed_order.data
 
 # Abort all open positions
 def abort_all_positions(client):
@@ -42,4 +42,8 @@ def abort_all_positions(client):
     
     # Get Markets for reference of tick size
     markets = client.public.get_markets().data
-    print(markets)
+    
+    pprint(markets)
+    
+    # Protect API
+    time.sleep(.5)
