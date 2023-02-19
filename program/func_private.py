@@ -38,7 +38,7 @@ def abort_all_positions(client):
     client.private.cancel_all_orders()
     
     # Protect API
-    time.sleep(.5)
+    time.sleep(0.5)
     
     # Get Markets for reference of tick size
     markets = client.public.get_markets().data
@@ -46,4 +46,4 @@ def abort_all_positions(client):
     pprint(markets)
     
     # Protect API
-    time.sleep(.5)
+    time.sleep(0.5)
