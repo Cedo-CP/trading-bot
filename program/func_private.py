@@ -32,7 +32,7 @@ def place_market_order(client, market, side, size, price, reduce_only):
     return placed_order.data
 
 # Abort all open positions
-def abort_all_positions(client):
+def ABORT_ALL_POSITIONS(client):
     
     # Cancel all orders
     client.private.cancel_all_orders()

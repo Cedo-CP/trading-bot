@@ -1,6 +1,6 @@
 from constants import ABORT_ALL_POSITIONS
 from func_connections import connect_dydx
-from func_private import abort_all_positions
+from func_private import ABORT_ALL_POSITIONS
 
 if __name__ == "__main__":
     
@@ -17,7 +17,7 @@ if __name__ == "__main__":
 if ABORT_ALL_POSITIONS:
    try: 
       print("CLosing all positions...")
-      close_orders = abort_all_positions(client)
+      close_orders = ABORT_ALL_POSITIONS(client)
    except Exception as e:
       print("Error closing all positions:", e)
       exit(1)
