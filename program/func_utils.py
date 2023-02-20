@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 
 # Format number
 def format_number(curr_num, match_num):
@@ -17,3 +18,14 @@ def format_number(curr_num, match_num):
     return curr_num_string
   else:
     return f"{int(curr_num)}"
+  
+  
+  
+  # Get ISO Times
+  def get_ISO_times():
+    
+    # Get timestamps
+    date_start_0 = datetime.now()
+    date_start_1 = date_start_0 - timedelta(hours=100)
+    
+    
