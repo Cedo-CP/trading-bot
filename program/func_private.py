@@ -69,7 +69,6 @@ def ABORT_ALL_POSITIONS(client):
             if position["side"] == "LONG":
                 side = "SELL"
                 
-            
             # Get Price
             price = float(position["entryPrice"])
             accept_price = price * 1.7 if side == "BUY" else price * 0.3
@@ -90,7 +89,7 @@ def ABORT_ALL_POSITIONS(client):
             close_orders.append(order)
 
             # Protect API
-            time.sleep(0.2)
+            time.sleep(0.5)
 
             # Override json file with empty list
             bot_agents = []
