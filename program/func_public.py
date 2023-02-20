@@ -9,6 +9,7 @@ from pprint import pprint
 # Get relevant time periods for ISO from and to
 ISO_TIMES = get_ISO_times()
 
+
 # Get Candles Historical
 def get_candles_historical(client, market):
 
@@ -41,7 +42,7 @@ def get_candles_historical(client, market):
 
 # Construct and return close price series
   close_prices.reverse()
-  prices_result = np.array(close_prices).astype(np.float)
+  prices_result = np.array(close_prices).astype(float)
   return prices_result
 
 # Construct market prices

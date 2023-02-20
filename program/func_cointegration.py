@@ -19,6 +19,7 @@ def calculate_half_life(spread):
   halflife = round(-np.log(2) / res.params[1], 0)
   return halflife
 
+
 # Calculate ZScore
 def calculate_zscore(spread):
   spread_series = pd.Series(spread)
@@ -28,10 +29,11 @@ def calculate_zscore(spread):
   zscore = (x - mean) / std
   return zscore
 
+
 # Calculate Cointegration
 def calculate_cointegration(series_1, series_2):
-  series_1 = np.array(series_1).astype(np.float)
-  series_2 = np.array(series_2).astype(np.float)
+  series_1 = np.array(series_1).astype(float)
+  series_2 = np.array(series_2).astype(float)
   coint_flag = 0
   coint_res = coint(series_1, series_2)
   coint_t = coint_res[0]
@@ -44,6 +46,7 @@ def calculate_cointegration(series_1, series_2):
   t_check = coint_t < critical_value
   coint_flag = 1 if p_value < 0.05 and t_check else 0
   return coint_flag, hedge_ratio, half_life
+
 
 # Store Cointegration Results
 def store_cointegration_results(df_market_prices):

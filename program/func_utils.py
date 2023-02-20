@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 
+
 # Format number
 def format_number(curr_num, match_num):
 
@@ -18,10 +19,12 @@ def format_number(curr_num, match_num):
     return curr_num_string
   else:
     return f"{int(curr_num)}"
-  
- # Format time
+
+
+# Format time
 def format_time(timestamp):
-  return timestamp.replace(microsecond=0).isoformat() 
+  return timestamp.replace(microsecond=0).isoformat()
+
 
 # Get ISO Times
 def get_ISO_times():
@@ -32,8 +35,8 @@ def get_ISO_times():
   date_start_2 = date_start_1 - timedelta(hours=100)
   date_start_3 = date_start_2 - timedelta(hours=100)
   date_start_4 = date_start_3 - timedelta(hours=100)
-  
-   # Format datetimes
+
+  # Format datetimes
   times_dict = {
     "range_1": {
       "from_iso": format_time(date_start_1),
@@ -55,5 +58,3 @@ def get_ISO_times():
 
   # Return result
   return times_dict
-    
-    
