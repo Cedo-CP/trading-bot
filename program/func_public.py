@@ -8,7 +8,7 @@ from pprint import pprint
 
 
 # Get relevant time periods for ISO from and to
-ISO_times = get_ISO_times
+ISO_times = get_ISO_times()
 
 pprint(ISO_times)
 
