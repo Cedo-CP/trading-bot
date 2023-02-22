@@ -19,6 +19,9 @@ MANAGE_EXITS = True
 # Resolution
 RESOLUTION = "1HOUR"
 
+# Token Factor
+TOKEN_FACTOR_10 = ["XLM-USD","DOGE-USD","TRON-USD"]
+
 # Stats Window
 WINDOW = 21
 
