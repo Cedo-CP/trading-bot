@@ -204,7 +204,6 @@ class BotAgent:
         print(order_status_close_order)
 
         # Send Message
-        send_message("Failed to execute. Code red. Error code: 101")
 
         # ABORT
         exit(1)
@@ -213,3 +212,4 @@ class BotAgent:
     else:
       self.order_dict["pair_status"] = "LIVE"
       return self.order_dict
+      
