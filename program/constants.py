@@ -2,7 +2,7 @@ from dydx3.constants import API_HOST_GOERLI, API_HOST_MAINNET
 from decouple import config
 
 # !!!!! Select Mode !!!!!
-MODE = "DEVELOPMENT"
+MODE = "PRODUCTION"
 
 # Close all open positions and orders
 ABORT_ALL_POSITIONS = False
