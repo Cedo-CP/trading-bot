@@ -1,4 +1,4 @@
-from constants import ABORT_ALL_POSITIONS, FIND_COINTEGRATED
+from constants import ABORT_ALL_POSITIONS, FIND_COINTEGRATED, PLACE_TRADES
 from func_connections import connect_dydx
 from func_private import ABORT_ALL_POSITIONS
 from func_public import construct_market_prices
@@ -45,3 +45,12 @@ if FIND_COINTEGRATED:
     except Exception as e:
       print("Error saving cointegrated pairs: ", e)
       exit(1)
+      
+  # Place trades for opening positions
+    if PLACE_TRADES:
+      try:
+        print("Finding trading opportunities...")
+        open_positions(client)
+      except Exception as e:
+        print("Error trading pairs: ", e)
+        exit(1)
