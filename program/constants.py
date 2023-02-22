@@ -11,7 +11,10 @@ ABORT_ALL_POSITIONS = True
 FIND_COINTEGRATED = False
 
 #Place Trades
-PLACE_TRADES = False
+PLACE_TRADES = True
+
+#Place Trades
+MANAGE_EXITS = True
 
 # Resolution
 RESOLUTION = "1HOUR"
